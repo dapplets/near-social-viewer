@@ -9,7 +9,7 @@ import { UserDropdown } from "./UserDropdown";
 import { DevActionsDropdown } from "./DevActionsDropdown";
 import { NotificationWidget } from "../NotificationWidget";
 import { StarButton } from "../StarButton";
-
+import { MutationDropdown } from "./mutation/MutationDropdown";
 const StyledNavigation = styled.div`
   position: sticky;
   top: 0;
@@ -81,6 +81,9 @@ export function DesktopNavigation(props) {
             Docs
             <ArrowUpRight />
           </NavigationButton>
+        </div>
+        <div>
+          <MutationDropdown />
         </div>
         <div className="user-section">
           <StarButton {...props} />

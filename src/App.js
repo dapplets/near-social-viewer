@@ -32,6 +32,7 @@ import { NavigationWrapper } from "./components/navigation/NavigationWrapper";
 import { NetworkId, Widgets } from "./data/widgets";
 import { useEthersProviderContext } from "./data/web3";
 import SignInPage from "./pages/SignInPage";
+import { MutationProvider } from "./contexts/MutationContext";
 
 export const refreshAllowanceObj = {};
 const documentationHref = "https://social.near-docs.io/";
@@ -85,6 +86,9 @@ function App(props) {
         },
         config: {
           defaultFinality: undefined,
+        },
+        features: {
+          enableComponentSrcDataKey: true,
         },
       });
   }, [initNear]);
@@ -163,25 +167,27 @@ function App(props) {
   return (
     <div className="App">
       <EthersProviderContext.Provider value={ethersProviderContext}>
-        <Router basename={process.env.PUBLIC_URL}>
-          <Switch>
-            <Route path={"/signin"}>
-              <NavigationWrapper {...passProps} />
-              <SignInPage {...passProps} />
-            </Route>
-            <Route path={"/embed/:widgetSrc*"}>
-              <EmbedPage {...passProps} />
-            </Route>
-            <Route path={"/edit/:widgetSrc*"}>
-              <NavigationWrapper {...passProps} />
-              <EditorPage {...passProps} />
-            </Route>
-            <Route path={"/:widgetSrc*"}>
-              <NavigationWrapper {...passProps} />
-              <ViewPage {...passProps} />
-            </Route>
-          </Switch>
-        </Router>
+        <MutationProvider>
+          <Router basename={process.env.PUBLIC_URL}>
+            <Switch>
+              <Route path={"/signin"}>
+                <NavigationWrapper {...passProps} />
+                <SignInPage {...passProps} />
+              </Route>
+              <Route path={"/embed/:widgetSrc*"}>
+                <EmbedPage {...passProps} />
+              </Route>
+              <Route path={"/edit/:widgetSrc*"}>
+                <NavigationWrapper {...passProps} />
+                <EditorPage {...passProps} />
+              </Route>
+              <Route path={"/:widgetSrc*"}>
+                <NavigationWrapper {...passProps} />
+                <ViewPage {...passProps} />
+              </Route>
+            </Switch>
+          </Router>
+        </MutationProvider>
       </EthersProviderContext.Provider>
     </div>
   );

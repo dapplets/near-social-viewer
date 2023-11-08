@@ -1,0 +1,88 @@
+@import "../assets/styles/animate.scss";
+@import "../assets/styles/colors.scss";
+
+.wrapper {
+  position: absolute;
+  z-index: 3;
+  top: 50px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  height: auto;
+  box-shadow: 0px 13px 28px 0px rgba(0, 0, 0, 0.1),
+    0px 51px 51px 0px rgba(0, 0, 0, 0.09),
+    0px 115px 69px 0px rgba(0, 0, 0, 0.05),
+    0px 204px 81px 0px rgba(0, 0, 0, 0.01), 0px 318px 89px 0px rgba(0, 0, 0, 0);
+  background: $edit-bg;
+  border-radius: 6px;
+  padding: 10px 20px;
+}
+
+
+.inputWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  svg {
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  &:hover {
+    svg {
+      transform: scale(1.5);
+      transition: all 0.3s;
+    }
+  }
+}
+.title {
+  color: $content-black;
+
+  font-size: 18px;
+
+  font-weight: 600;
+  line-height: normal;
+}
+.subtitleBlock {
+  display: flex;
+  width: 100%;
+  padding-left: 5px;
+  color: $content-black;
+
+  font-size: 12px;
+
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.6;
+  margin-top: 5px;
+}
+.bottomBlock {
+  display: flex;
+  align-items: center;
+  width: 134px;
+  justify-content: space-between;
+
+  margin: 0 auto;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-top: 20px;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.bottomText {
+  color: $blue;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 149%;
+}

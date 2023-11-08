@@ -1,0 +1,62 @@
+@import "../assets/styles/animate.scss";
+@import "../assets/styles/colors.scss";
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  border-radius: 6px;
+  background: $pure-white;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.pairSecond {
+  background: $pure-white;
+}
+
+.pairRemove {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+  margin-bottom: auto;
+  margin-top: 13px;
+
+  svg {
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    svg {
+      transition: all 0.3s;
+
+      path {
+        stroke: $primary-hover;
+      }
+    }
+  }
+}
+.pairArrow {
+  margin-top: 13px;
+  margin-bottom: auto;
+}
+
+.rubberBlock {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  width: 100%;
+}
+
+.addAdditional {
+  margin-top: auto;
+  margin-bottom: 13px;
+}

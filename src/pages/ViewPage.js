@@ -3,8 +3,10 @@ import { Widget } from "near-social-vm";
 import { useParams } from "react-router-dom";
 import { useQuery } from "../hooks/useQuery";
 import { useHashRouterLegacy } from "../hooks/useHashRouterLegacy";
+import { useMutation } from "../contexts/MutationContext";
 
 export default function ViewPage(props) {
+  const { overrides } = useMutation();
   useHashRouterLegacy();
 
   const { widgetSrc } = useParams();
@@ -57,11 +59,16 @@ export default function ViewPage(props) {
             paddingTop: "var(--body-top-padding)",
           }}
         >
-          <Widget key={src} src={src} props={widgetProps} />
+          <Widget
+            key={src}
+            src={src}
+            props={widgetProps}
+            overrides={overrides}
+          />
         </div>
       </div>
     </div>
   ) : (
-    <Widget key={src} src={src} props={widgetProps} />
+    <Widget key={src} src={src} props={widgetProps} overrides={overrides} />
   );
 }
