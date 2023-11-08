@@ -8,6 +8,13 @@ import { StarFilled } from "../assets/icons/StarFilled";
 import { Star } from "../assets/icons/Star";
 import { Widget } from "near-social-vm";
 
+import LNC_LOGO from "../assets/logos/learn-near-club.jpg";
+import NDC_LOGO from "../assets/logos/ndc.jpg";
+import NDH_LOGO from "../assets/logos/near-dev-hub.png";
+// import NF_LOGO from "../assets/logos/near-foundation.jpg";
+import NEAR_LOGO from "../assets/logos/near.png";
+import DAPPLETS_LOGO from "../assets/logos/dapplets.png";
+
 export function MutationDropdownItem({
   mutation,
   isSelected,
@@ -28,14 +35,7 @@ export function MutationDropdownItem({
       </div> */}
 
       <div>
-        <Widget
-          src="mob.near/widget/ProfileImage"
-          props={{
-            accountId: mutation.authorId,
-            className: "d-inline-block",
-            style: { width: "30px", height: "30px", marginRight: 8 },
-          }}
-        />
+        <MutationIcon authorId={mutation.authorId} />
       </div>
 
       <div onClick={onMutationClick} className={cn(styles.blockLeft)}>
@@ -71,3 +71,53 @@ export function MutationDropdownItem({
     </div>
   );
 }
+
+const MutationIcon = ({ authorId, mutationId }) => {
+  if (authorId === "dapplets.near") {
+    return (
+      <img
+        style={{ width: "30px", height: "30px", marginRight: 8, borderRadius: 15 }}
+        src={NDC_LOGO}
+      />
+    );
+  } else if (authorId === "alsakhaev.near") {
+    return (
+      <img
+        style={{ width: "30px", height: "30px", marginRight: 8, borderRadius: 15 }}
+        src={LNC_LOGO}
+      />
+    );
+  } else if (authorId === "dapplets.sputnik-dao.near") {
+    return (
+      <img
+        style={{ width: "30px", height: "30px", marginRight: 8, borderRadius: 15 }}
+        src={NDH_LOGO}
+      />
+    );
+  } else if (authorId === "mybadge.near") {
+    return (
+      <img
+        style={{ width: "30px", height: "30px", marginRight: 8, borderRadius: 15 }}
+        src={NEAR_LOGO}
+      />
+    );
+  } else if (authorId === "paywall.near") {
+    return (
+      <img
+        style={{ width: "30px", height: "30px", marginRight: 8, borderRadius: 15 }}
+        src={DAPPLETS_LOGO}
+      />
+    );
+  } else {
+    return (
+      <Widget
+        src="mob.near/widget/ProfileImage"
+        props={{
+          accountId: authorId,
+          className: "d-inline-block",
+          style: { width: "30px", height: "30px", marginRight: 8 },
+        }}
+      />
+    );
+  }
+};
