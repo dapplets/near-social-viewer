@@ -6,6 +6,7 @@ import { Edit } from "../assets/icons/Edit";
 import cn from "classnames";
 import { StarFilled } from "../assets/icons/StarFilled";
 import { Star } from "../assets/icons/Star";
+import { Widget } from "near-social-vm";
 
 export function MutationDropdownItem({
   mutation,
@@ -25,6 +26,17 @@ export function MutationDropdownItem({
       {/* <div onClick={onStarClick} className={styles.starIcon}>
         {isStarred ? <StarFilled /> : <Star />}
       </div> */}
+
+      <div>
+        <Widget
+          src="mob.near/widget/ProfileImage"
+          props={{
+            accountId: mutation.authorId,
+            className: "d-inline-block",
+            style: { width: "30px", height: "30px", marginRight: 8 },
+          }}
+        />
+      </div>
 
       <div onClick={onMutationClick} className={cn(styles.blockLeft)}>
         <div className={cn(styles.blockTitle)}>

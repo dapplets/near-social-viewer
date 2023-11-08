@@ -52,7 +52,7 @@
 .blockLeft {
   display: flex;
   flex-direction: column;
-  width: 234px;
+  width: 194px;
 
   .titleMutation {
     color: $content-black;
@@ -68,7 +68,6 @@
 .itemMutation {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 5px 3px 5px 5px;
   width: 272px;
   height: 46px;
@@ -106,7 +105,7 @@
   justify-content: flex-start;
 }
 .label {
-  width: 44px;
+  padding: 0 4px;
   height: 14px;
   display: flex;
   align-items: center;
