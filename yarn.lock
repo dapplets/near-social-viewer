@@ -7727,7 +7727,7 @@ near-social-vm-types@^1.0.0:
 
 "near-social-vm@github:dapplets/near-social-vm#override-props":
   version "2.5.2"
-  resolved "https://codeload.github.com/dapplets/near-social-vm/tar.gz/e36684cb4e1ba2651b41daa8cdedcd9c390dd3fd"
+  resolved "https://codeload.github.com/dapplets/near-social-vm/tar.gz/8940215d433e748e501248694c807e9fa477d0b4"
   dependencies:
     "@braintree/sanitize-url" "6.0.0"
     "@radix-ui/react-accordion" "^1.1.1"
