@@ -43,9 +43,9 @@ export function MutationDropdownItem({
           {mutation.isLocal ? (
             <div className={cn(styles.label)}>Local</div>
           ) : null}
-          {mutation.isEdited ? (
+          {/* {mutation.isEdited ? (
             <div className={cn(styles.label)}>Edited</div>
-          ) : null}
+          ) : null} */}
           <span className={cn(styles.titleMutation)}>
             {visibleText(mutation.mutationId)}
           </span>
