@@ -7725,9 +7725,9 @@ near-social-vm-types@^1.0.0:
   resolved "https://registry.yarnpkg.com/near-social-vm-types/-/near-social-vm-types-1.0.0.tgz#721494a863d2c0d64da2a43d80224e4080b690db"
   integrity sha512-K5CxfiiKc7evzFb/1BGBOD2x4QqnEBuVaHkgRsRTGv02ctLkxA/Xf892SornWSkD75Hf0s9j/jeM5PpMfXcM9A==
 
-"near-social-vm@git+https://github.com/NearSocial/VM.git#2.5.2":
+"near-social-vm@github:dapplets/near-social-vm":
   version "2.5.2"
-  resolved "git+https://github.com/NearSocial/VM.git#9fe2d4ec05727ee2e2db8ddf198556220a169a4f"
+  resolved "https://codeload.github.com/dapplets/near-social-vm/tar.gz/7709285af5e814245d0475cb876b5824d69256dd"
   dependencies:
     "@braintree/sanitize-url" "6.0.0"
     "@radix-ui/react-accordion" "^1.1.1"
@@ -7780,7 +7780,7 @@ near-social-vm-types@^1.0.0:
     react-files "^3.0.0-alpha.3"
     react-infinite-scroller "^1.2.6"
     react-markdown "^7.1.0"
-    react-singleton-hook "^3.1.1"
+    react-singleton-hook "^4.0.1"
     react-syntax-highlighter "^15.5.0"
     react-uuid "^1.0.2"
     remark-gfm "^3.0.1"
@@ -8825,10 +8825,10 @@ react-router@5.3.4:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react-singleton-hook@^3.1.1:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/react-singleton-hook/-/react-singleton-hook-3.4.0.tgz#23e1fb8ea55c6e4f7fffdc8674bb03e99a948490"
-  integrity sha512-eQEpyacGAaRejmWUizUdNNQFn5AO0iaKRSl1jxgC0FQadVY/I1WFuPrYiutglPzO9s8yEbIh95UXVJQel4d7HQ==
+react-singleton-hook@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/react-singleton-hook/-/react-singleton-hook-4.0.1.tgz#98082b37be06b22845ced85eb11e02bacc3b2580"
+  integrity sha512-fWuk8VxcZPChrkQasDLM8pgd/7kyi+Cr/5FfCiD99FicjEru+JmtEZNnN4lJ8Z7KbqAST5CYPlpz6lmNsZFGNw==
 
 react-style-singleton@^2.2.1:
   version "2.2.1"
@@ -10026,6 +10026,11 @@ uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+
+uuid@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.1.tgz#e188d4c8853cc722220392c424cd637f32293f30"
+  integrity sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==
 
 uvu@^0.5.0:
   version "0.5.6"
