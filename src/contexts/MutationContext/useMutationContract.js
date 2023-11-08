@@ -7,6 +7,14 @@ const EXCLUDED_MUTATION_IDS = [
   "dapplets.near/community",
   "alsakhaev.near/nft-everywhere",
   "alsakhaev.near/red-mutation",
+  "alsakhaev.near/red-buttons",
+  "dapplets.near/CatsAndDislike",
+  "dapplets.near/CatsInsteadOfPosts",
+  "dapplets.near/CatsAreEverywhere",
+  "dapplets.near/TestMutation1",
+  "dapplets.near/TestMutation2",
+  "dapplets.near/TestMutation3",
+  "dapplets.near/TestMutation4",
 ];
 
 const convertOverridesToContract = (overrides) => {
