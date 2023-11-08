@@ -37,7 +37,6 @@ export function MutationEditorModal({ mutation: _mutation, setEdit }) {
 
   const handleChangeMutationId = (event) => {
     setMutationIdInputValue(event.target.value);
-    setOpen(false);
   };
 
   const handleAddOverride = () => {
