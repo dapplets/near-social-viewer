@@ -3,12 +3,12 @@ import { Widget } from "near-social-vm";
 import { useParams } from "react-router-dom";
 import { useQuery } from "../hooks/useQuery";
 import { useHashRouterLegacy } from "../hooks/useHashRouterLegacy";
-import { useMutation } from "../contexts/MutationContext";
+import { useMutableWeb } from "../contexts/MutableWebContext";
 
 export default function ViewPage(props) {
-  const { overrides } = useMutation();
   useHashRouterLegacy();
-
+  
+  const { overrides } = useMutableWeb();
   const { widgetSrc } = useParams();
   const query = useQuery();
   const [widgetProps, setWidgetProps] = useState({});
